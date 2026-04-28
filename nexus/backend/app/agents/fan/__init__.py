@@ -1,1 +1,3 @@
-# Fan Agent — fully implemented in Task 6
+from app.agents.fan.agent import FanAgent
+
+__all__ = ["FanAgent"]
