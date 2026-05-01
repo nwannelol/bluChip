@@ -1,3 +1,8 @@
+# CIL — Railway deployment config for the FastAPI backend
+#
+# Firecrawl uses the cloud API (api.firecrawl.dev).
+# Set FIRECRAWL_KEY in the Railway environment variables.
+
 [build]
 builder = "nixpacks"
 

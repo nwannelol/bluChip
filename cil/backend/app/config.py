@@ -31,6 +31,10 @@ class Settings(BaseSettings):
     twilio_auth_token: str = ""
     twilio_whatsapp_from: str = "whatsapp:+14155238886"
 
+    # --- Firecrawl ---
+    firecrawl_url: str = "https://api.firecrawl.dev"
+    firecrawl_key: str = ""
+
     # --- Redis ---
     upstash_redis_url: str = ""
 

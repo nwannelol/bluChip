@@ -1,0 +1,4 @@
+# Backend-specific ignores (root .gitignore handles the rest)
+.env
+venv/
+.venv/

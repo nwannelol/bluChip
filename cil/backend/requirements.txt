@@ -9,8 +9,12 @@ python-dotenv==1.0.1
 
 # === LLM / Agent ===
 langchain>=0.3.7
+langchain-core>=0.3.7
 langchain-groq>=0.2.1
 langgraph>=0.2.45
+
+# === Web Intelligence ===
+firecrawl-py>=1.5.0
 
 # === Embeddings ===
 sentence-transformers>=3.2.1
