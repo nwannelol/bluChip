@@ -1,4 +1,4 @@
-# CLAUDE.md — Club Intelligence Layer (CIL)
+# CLAUDE.md — Club Intelligence Layer (NEXUS)
 
 > Read this file at the start of every session. Do not deviate from these
 > conventions without explicit instruction. Do not rewrite working code
@@ -117,14 +117,14 @@ cil/
 - Each agent lives in its own folder under `agents/`
 - Stub agents must return `"is_stub": true` in every response
 - Fan Agent is the only fully implemented agent in Phase 1
-- All agents share the `CILState` TypedDict from `graph/state.py`
+- All agents share the `NEXUSState` TypedDict from `graph/state.py`
 
 ---
 
 ## LangGraph State Shape
 
 ```python
-class CILState(TypedDict):
+class NEXUSState(TypedDict):
     message: str
     channel: str                 # "web" | "whatsapp"
     session_id: str
