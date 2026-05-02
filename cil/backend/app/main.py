@@ -26,6 +26,13 @@ def create_app() -> FastAPI:
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         logger.info("⚽ CIL starting up — Sporting Lagos FC")
+        # Warm up the Supabase connection so the first request isn't slow.
+        try:
+            from app.services.supabase import get_supabase
+            await get_supabase(settings)
+            logger.info("Supabase client ready")
+        except Exception as exc:
+            logger.warning("Supabase init failed (continuing): %s", exc)
         yield
         logger.info("CIL shutting down")
 
