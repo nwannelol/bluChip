@@ -2,12 +2,15 @@
 
 Agents call `scrape()` and `search()` from here.
 Never import FirecrawlApp directly in agent or tool files.
+
+SDK: firecrawl-py v4 — uses _v1_client with keyword args, returns Pydantic models.
 """
 
 import asyncio
 from typing import Any
 
 from firecrawl import FirecrawlApp
+from firecrawl.v1.client import V1ScrapeOptions
 
 from app.config import Settings
 
@@ -20,22 +23,14 @@ def _get_client(settings: Settings) -> FirecrawlApp:
 
 
 async def scrape(url: str, settings: Settings) -> str:
-    """Scrape a single URL and return its content as markdown.
-
-    Args:
-        url: The URL to fetch.
-        settings: Injected application settings.
-
-    Returns:
-        Markdown string of the page content, or empty string on failure.
-    """
-    client = _get_client(settings)
-    result: dict[str, Any] = await asyncio.to_thread(
-        client.scrape_url,
+    """Scrape a single URL and return its content as markdown."""
+    v1 = _get_client(settings)._v1_client
+    result = await asyncio.to_thread(
+        v1.scrape_url,
         url,
-        params={"formats": ["markdown"]},
+        formats=["markdown"],
     )
-    return result.get("markdown", "")
+    return result.markdown or ""
 
 
 async def search(
@@ -45,21 +40,14 @@ async def search(
 ) -> list[dict[str, Any]]:
     """Search the web and return scraped results.
 
-    Args:
-        query: Search query string.
-        settings: Injected application settings.
-        limit: Maximum number of results to return.
-
     Returns:
-        List of dicts, each with keys: url, title, markdown.
+        List of dicts with keys: url, title, markdown.
     """
-    client = _get_client(settings)
-    result: dict[str, Any] = await asyncio.to_thread(
-        client.search,
+    v1 = _get_client(settings)._v1_client
+    result = await asyncio.to_thread(
+        v1.search,
         query,
-        params={
-            "limit": limit,
-            "scrapeOptions": {"formats": ["markdown"]},
-        },
+        limit=limit,
+        scrape_options=V1ScrapeOptions(formats=["markdown"]),
     )
-    return result.get("data", [])
+    return result.data or []
