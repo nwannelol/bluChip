@@ -132,6 +132,35 @@ async def log_agent_action(
         logger.warning("Failed to write agent log: %s", exc)
 
 
+async def fetch_agent_logs(
+    settings: Settings,
+    limit: int = 50,
+    agent_name: str | None = None,
+) -> list[dict[str, Any]]:
+    """Return recent agent_logs rows, newest first.
+
+    Args:
+        settings: Injected application settings.
+        limit: Max rows to return.
+        agent_name: Optional filter — one of fan/media/scout/ops.
+    """
+    client = _get_client(settings)
+
+    def _query() -> Any:
+        q = (
+            client.table("agent_logs")
+            .select("*")
+            .order("created_at", desc=True)
+            .limit(limit)
+        )
+        if agent_name:
+            q = q.eq("agent_name", agent_name)
+        return q.execute()
+
+    result = await asyncio.to_thread(_query)
+    return result.data or []
+
+
 async def fetch_conversation_history(
     session_id: str,
     settings: Settings,
