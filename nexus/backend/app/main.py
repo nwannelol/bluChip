@@ -8,7 +8,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import Settings
-from app.api.routes import health, chat, whatsapp, admin
+from app.api.routes import analytics, admin, chat, health, whatsapp
 
 
 def create_app() -> FastAPI:
@@ -51,6 +51,7 @@ def create_app() -> FastAPI:
     app.include_router(chat.router, prefix="/api/v1", tags=["chat"])
     app.include_router(whatsapp.router, prefix="/api/v1", tags=["whatsapp"])
     app.include_router(admin.router, prefix="/api/v1", tags=["admin"])
+    app.include_router(analytics.router, prefix="/api/v1", tags=["analytics"])
 
     return app
 

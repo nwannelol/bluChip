@@ -9,9 +9,11 @@ Always returns HTTP 200 so Twilio does not retry the webhook.
 
 import logging
 
-from fastapi import APIRouter, Form, Response
+from fastapi import APIRouter, Depends, Form, Response
 
-from app.dependencies import get_graph
+from app.config import Settings
+from app.dependencies import get_graph, get_settings
+from app.services.supabase import fetch_conversation_history
 
 logger = logging.getLogger("nexus.api.whatsapp")
 
@@ -25,11 +27,13 @@ async def whatsapp_webhook(
     Body: str = Form(default=""),
     From: str = Form(default=""),
     WaId: str = Form(default=""),
+    settings: Settings = Depends(get_settings),
 ) -> Response:
     """Handle an inbound WhatsApp message and reply via TwiML."""
     session_id = WaId or From.replace("whatsapp:", "").replace("+", "")
     logger.info("WhatsApp inbound from=%s session=%s", From, session_id)
 
+    history = await fetch_conversation_history(session_id, settings, limit=10)
     graph = get_graph()
 
     state = {
@@ -37,7 +41,7 @@ async def whatsapp_webhook(
         "channel": "whatsapp",
         "session_id": session_id,
         "target_agent": "fan",
-        "conversation_history": [],
+        "conversation_history": history,
         "retrieved_docs": [],
         "agent_response": "",
         "sources": [],

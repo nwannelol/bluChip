@@ -12,7 +12,7 @@ from typing import Optional
 from fastapi import APIRouter, Depends, Query
 
 from app.config import Settings
-from app.dependencies import get_settings
+from app.dependencies import get_settings, require_admin_key
 from app.models.schemas import AgentInfo, AgentLogEntry, KnowledgeRefreshResponse
 from app.services import supabase as db
 
@@ -39,8 +39,8 @@ _AGENTS: list[AgentInfo] = [
         name="scout",
         display_name="Scout Agent",
         description="Player analysis, transfer intelligence, opposition scouting",
-        status="stub",
-        is_stub=True,
+        status="active",
+        is_stub=False,
     ),
     AgentInfo(
         name="ops",
@@ -53,7 +53,7 @@ _AGENTS: list[AgentInfo] = [
 
 
 @router.get("/admin/agents", response_model=list[AgentInfo])
-async def list_agents() -> list[AgentInfo]:
+async def list_agents(_: None = Depends(require_admin_key)) -> list[AgentInfo]:
     """Return the status of all four NEXUS agents."""
     return _AGENTS
 
@@ -63,6 +63,7 @@ async def get_logs(
     limit: int = Query(default=50, ge=1, le=200),
     agent: Optional[str] = Query(default=None),
     settings: Settings = Depends(get_settings),
+    _: None = Depends(require_admin_key),
 ) -> list[AgentLogEntry]:
     """Return recent agent action logs, newest first."""
     rows = await db.fetch_agent_logs(settings, limit=limit, agent_name=agent)
@@ -72,6 +73,7 @@ async def get_logs(
 @router.post("/admin/knowledge/refresh", response_model=KnowledgeRefreshResponse)
 async def refresh_knowledge(
     settings: Settings = Depends(get_settings),
+    _: None = Depends(require_admin_key),
 ) -> KnowledgeRefreshResponse:
     """Trigger a Firecrawl web ingest in the background.
 
