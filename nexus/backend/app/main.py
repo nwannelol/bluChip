@@ -4,11 +4,13 @@ import logging
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import Settings
-from app.api.routes import health, chat, whatsapp
+from app.api.routes import analytics, admin, chat, health, whatsapp
+from app.seed.refresh_matches import refresh_matches
 
 
 def create_app() -> FastAPI:
@@ -26,7 +28,27 @@ def create_app() -> FastAPI:
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         logger.info("⚽ NEXUS starting up — Sporting Lagos FC")
+
+        # Seed live matches on boot, then refresh hourly
+        scheduler = AsyncIOScheduler()
+        scheduler.add_job(
+            refresh_matches,
+            "interval",
+            hours=1,
+            args=[settings],
+            id="matches_refresh",
+            replace_existing=True,
+        )
+        scheduler.start()
+        logger.info("Matches refresh scheduler started (interval: 1h)")
+
+        # Run once immediately so the knowledge base is fresh on first boot
+        import asyncio
+        asyncio.create_task(refresh_matches(settings))
+
         yield
+
+        scheduler.shutdown(wait=False)
         logger.info("NEXUS shutting down")
 
     # --- App ---
@@ -50,6 +72,8 @@ def create_app() -> FastAPI:
     app.include_router(health.router, prefix="/api/v1", tags=["health"])
     app.include_router(chat.router, prefix="/api/v1", tags=["chat"])
     app.include_router(whatsapp.router, prefix="/api/v1", tags=["whatsapp"])
+    app.include_router(admin.router, prefix="/api/v1", tags=["admin"])
+    app.include_router(analytics.router, prefix="/api/v1", tags=["analytics"])
 
     return app
 

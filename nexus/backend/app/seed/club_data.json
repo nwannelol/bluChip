@@ -15,24 +15,44 @@
     "content": "Sporting Lagos FC plays their home matches at Mobolaji Johnson Arena, also known as Onikan Stadium, located in the Onikan district of Lagos Island. The stadium has a capacity of 10,000 spectators. Mobolaji Johnson Arena is one of Lagos's historic football venues, situated close to the Lagos waterfront. The stadium is named after Mobolaji Johnson, a former military governor of Lagos State. The Onikan area is central to Lagos Island, making it easily accessible for fans across the metropolitan area."
   },
   {
+    "title": "Stadium — Ticket Information",
+    "category": "stadium",
+    "content": "Tickets for Sporting Lagos FC home matches at Mobolaji Johnson Arena can be purchased at the stadium on matchday or through the club's official channels. The stadium offers different stand categories to suit various fan preferences and budgets. Fans are advised to arrive early, especially for high-profile fixtures like derby matches against Remo Stars and Ikorodu City, as these games attract large crowds. The club encourages supporters to follow their official social media pages (@SportingLagosFC on Twitter/X and Facebook) for announcements on ticket sales and matchday information."
+  },
+  {
     "title": "Ownership and Founding Story",
     "category": "history",
     "content": "Sporting Lagos FC was founded on February 3, 2022, by Shola Akinlade. Akinlade is the co-founder and CEO of Paystack, the Nigerian payment processing company that was acquired by Stripe in 2020 in one of the largest technology acquisitions in African history. Akinlade's vision for Sporting Lagos is to build a modern, professionally run football club that represents Lagos on the biggest stages in African football. The club is seen as part of a new wave of tech-entrepreneur-backed football clubs in Africa, bringing modern management practices, data analytics, and a fan-first approach to Nigerian football."
   },
   {
+    "title": "Club History Timeline",
+    "category": "history",
+    "content": "Key milestones in Sporting Lagos FC history: February 3, 2022 — Club founded by Shola Akinlade. 2022 — Gained promotion and entered the Nigeria Premier Football League (NPFL). 2023 — Established the youth academy and began development programs. 2024 — Academy team won the Gothia Cup Under-17 in Gothenburg, Sweden — a landmark international achievement. 2025 — Ebenezer Harcourt became Nigeria's youngest senior international (Super Eagles call-up), representing a major milestone in the club's player development program. The club continues to grow rapidly on and off the pitch."
+  },
+  {
     "title": "Head Coach — Jeffrey Buter",
     "category": "management",
-    "content": "Jeffrey Buter is the Head Coach of Sporting Lagos FC. He leads the first team's tactical preparation and matchday operations. Under his guidance, the club has developed a structured playing style aimed at combining technical quality with the physicality required in the Nigeria Premier Football League."
+    "content": "Jeffrey Buter is the Head Coach of Sporting Lagos FC. He leads the first team's tactical preparation and matchday operations. Buter brings a structured, professional approach to coaching that aligns with the club's vision of modern, data-informed football management. Under his guidance, Sporting Lagos has developed a clear playing identity — combining technical quality with the physical demands of the Nigeria Premier Football League. His staff includes assistant coaches, a goalkeeping coach, and a fitness and conditioning team."
   },
   {
     "title": "Club Captain — Abdulraheem Suleiman",
     "category": "squad",
-    "content": "Abdulraheem Suleiman is the captain of Sporting Lagos FC. He wears the number 8 shirt and plays as a midfielder. As captain, Suleiman is the on-field leader of the team, marshalling the midfield and setting the tempo for the club's play. His leadership and experience are central to Sporting Lagos's ambitions in the NPFL."
+    "content": "Abdulraheem Suleiman is the captain of Sporting Lagos FC. He wears the number 8 shirt and plays as a central midfielder. Suleiman joined the club from FK Metta in Latvia, bringing international experience to the Sporting Lagos midfield. As captain, he is the on-field leader, marshalling the midfield, setting tempo, and communicating the coach's instructions during matches. His leadership, experience, and technical ability make him one of the most important players in the squad. Fans regard him as the heartbeat of the team."
+  },
+  {
+    "title": "Goalkeeper — Ebenezer Harcourt",
+    "category": "squad",
+    "content": "Ebenezer Harcourt is the first-choice goalkeeper for Sporting Lagos FC. In 2025, he made history by becoming Nigeria's youngest senior international, earning a call-up to the Super Eagles national team — a testament to the extraordinary talent the club has developed. Harcourt is known for his shot-stopping ability, commanding presence in the penalty area, and composure under pressure. His rise to the Super Eagles is one of the proudest achievements in Sporting Lagos's short history and demonstrates the club's commitment to developing elite-level Nigerian talent."
+  },
+  {
+    "title": "Squad Overview — 2024/25 Season",
+    "category": "squad",
+    "content": "The Sporting Lagos FC first team squad for the 2024/25 NPFL season is a blend of experienced Nigerian footballers, returning diaspora players, and young talent promoted from the academy. The squad is built around a competitive formation under Head Coach Jeffrey Buter. Key departments include a goalkeeper unit led by Ebenezer Harcourt (Nigeria's youngest Super Eagles call-up), a disciplined defensive line, a midfield anchored by captain Abdulraheem Suleiman (#8), and attacking players capable of fast transitions. Full squad details including shirt numbers and positions are available on the official club website at sportinglagos.com/players."
   },
   {
     "title": "League and Competition",
     "category": "competition",
-    "content": "Sporting Lagos FC competes in the Nigeria Premier Football League (NPFL), which is the top tier of professional football in Nigeria. The NPFL is organized by the League Management Company (LMC) and features clubs from across Nigeria competing for the national championship. Sporting Lagos represents Lagos State in the league, one of the most competitive footballing regions in the country. The club aspires to qualify for continental competitions such as the CAF Champions League and the CAF Confederation Cup."
+    "content": "Sporting Lagos FC competes in the Nigeria Premier Football League (NPFL), which is the top tier of professional football in Nigeria. The NPFL is organized by the League Management Company (LMC) and features clubs from across Nigeria competing for the national championship. Sporting Lagos represents Lagos State in the league, one of the most competitive footballing regions in the country. The club aspires to qualify for continental competitions such as the CAF Champions League and the CAF Confederation Cup. Current fixtures and results are updated on the official website at sportinglagos.com/matches."
   },
   {
     "title": "Rivals — Lagos Derby",
@@ -40,9 +60,19 @@
     "content": "Sporting Lagos FC's biggest rivals are Remo Stars FC and Ikorodu City FC. Matches against these clubs are considered Lagos Derby fixtures and carry enormous significance for fans and the city. Remo Stars FC, based in Ikenne-Remo in Ogun State (in the greater Lagos catchment area), are one of the NPFL's best-run clubs and represent the most high-profile rivalry for Sporting Lagos. Ikorodu City FC, based in Ikorodu in Lagos State, are the other key Lagos rival. Derby matches are the most anticipated fixtures on the Sporting Lagos calendar."
   },
   {
+    "title": "Remo Stars Rivalry — Head to Head",
+    "category": "rivalry",
+    "content": "The fixture between Sporting Lagos FC and Remo Stars FC is regarded as one of the defining rivalries of modern Nigerian football. Both clubs represent the new generation of professionally run NPFL clubs — Remo Stars backed by business interests in Ogun State, Sporting Lagos founded by tech entrepreneur Shola Akinlade. Both clubs have ambitions for continental football. Matches between the sides are fiercely contested, with high intensity and passionate support from both sets of fans. The head-to-head record and most recent results are available via the official match schedule at sportinglagos.com/matches."
+  },
+  {
     "title": "Academy — Gothia Cup Victory",
     "category": "academy",
     "content": "Sporting Lagos FC has a youth academy that develops young Nigerian football talent. In a landmark achievement for the club, the Sporting Lagos academy team won the Gothia Cup Under-17 tournament in Sweden in 2024. The Gothia Cup is one of the world's largest and most prestigious youth football tournaments, held annually in Gothenburg, Sweden. Winning it announced Sporting Lagos to an international audience and demonstrated the quality of the club's youth development program. The victory was celebrated as a historic moment for Lagos football."
+  },
+  {
+    "title": "Youth Academy Structure",
+    "category": "academy",
+    "content": "The Sporting Lagos FC youth academy runs multiple age-group teams, providing a structured pathway for young Lagos talents to develop from grassroots level to first-team consideration. The academy philosophy emphasizes technical development, tactical understanding, physical conditioning, and mental fortitude. Inspired by European models of youth development, the program uses modern training methodologies aligned with the senior team's playing style under Jeffrey Buter. The Gothia Cup U17 victory in 2024 is the academy's most high-profile achievement to date, with players from that squad now being tracked as future first-team prospects."
   },
   {
     "title": "Ebenezer Harcourt — Historic Achievement",
@@ -53,6 +83,16 @@
     "title": "Fan Culture and Community",
     "category": "fans",
     "content": "Sporting Lagos FC has quickly built a passionate and vocal fanbase since its founding in 2022. The nickname 'The Noisy Lagosians' reflects the energy and volume of the club's supporters. Lagos is one of Africa's largest cities with a massive football-loving population, and Sporting Lagos has connected with young, tech-savvy Lagosians who see the club as representing a new vision for Nigerian football. The club engages fans through social media, community events, and a modern approach to supporter relations. Matchdays at Mobolaji Johnson Arena are vibrant occasions driven by the energy of the home faithful."
+  },
+  {
+    "title": "Match Day Experience at Mobolaji Johnson Arena",
+    "category": "fans",
+    "content": "Matchdays at Mobolaji Johnson Arena (Onikan Stadium) are lively, community-driven occasions. The stadium's central location on Lagos Island makes it accessible by road from the mainland and other parts of the city. Fans are encouraged to arrive early to get the best spots and soak up the pre-match atmosphere. Food vendors and merchandise stalls operate around the stadium on matchdays. The Noisy Lagosians fanbase creates an electric atmosphere, with chants, drums, and flags throughout the 90 minutes. Check sportinglagos.com/matches for upcoming home fixtures."
+  },
+  {
+    "title": "Social Media and Digital Presence",
+    "category": "identity",
+    "content": "Sporting Lagos FC maintains an active digital presence across multiple platforms. Fans can follow the club for news, match updates, behind-the-scenes content, and player features. Official channels: Twitter/X — @SportingLagosFC, Facebook — Sporting Lagos FC, Instagram — @sportinglagosfc, Official Website — sportinglagos.com. The club also uses WhatsApp for community engagement and fan communication. As a club founded by a technology entrepreneur, Sporting Lagos places strong emphasis on digital fan engagement and modern supporter relations. SONA, the club's AI assistant, is also available to fans via the website and WhatsApp."
   },
   {
     "title": "Club Mission and Vision",
@@ -73,5 +113,20 @@
     "title": "Paystack and the Tech Connection",
     "category": "history",
     "content": "Sporting Lagos FC was founded by Shola Akinlade, who co-founded Paystack in 2015 alongside Ezra Olubi. Paystack became Nigeria's leading payment processing platform, processing billions of naira in transactions for businesses across Africa. In 2020, Stripe acquired Paystack for a reported $200 million, making it one of the largest tech acquisitions in African history. Akinlade used the success of Paystack to pursue his passion for football, founding Sporting Lagos in 2022. The club's 'Tech Boys' nickname is a nod to this background, and the club brings Silicon Valley-style thinking to Nigerian football — data analytics, professional management, and a focus on long-term club building."
+  },
+  {
+    "title": "CAF Ambitions and Continental Football",
+    "category": "competition",
+    "content": "Sporting Lagos FC's long-term ambition is to qualify for and compete in continental African football — specifically the CAF Champions League (for NPFL champions) and the CAF Confederation Cup (for top finishers). Founder Shola Akinlade has spoken about wanting to build a club that can represent Nigeria and Lagos on the biggest African stages. As the club grows in experience and squad quality, continental participation is a central goal. Qualifying for CAF competitions would also significantly increase the club's profile and commercial revenues."
+  },
+  {
+    "title": "Player Recruitment and Transfer Philosophy",
+    "category": "transfers",
+    "content": "Sporting Lagos FC's recruitment strategy focuses on a blend of experienced NPFL players, Nigerian diaspora talent returning from clubs abroad, and scouted young players from the local Lagos ecosystem. The club uses data and analytics in its scouting process — consistent with its tech-first founding philosophy. Captain Abdulraheem Suleiman's arrival from FK Metta (Latvia) is an example of the diaspora recruitment approach. The club also promotes from its own academy, with the U17 Gothia Cup winners considered future first-team candidates. For the latest transfer news, check sportinglagos.com/news and the club's social media channels."
+  },
+  {
+    "title": "Sporting Lagos FC — Contact and Fan Services",
+    "category": "identity",
+    "content": "For all fan enquiries, match information, and club news, supporters can reach Sporting Lagos FC through the following channels: Official website — sportinglagos.com (squad, matches, news, club info). Social media — @SportingLagosFC on Twitter/X, Sporting Lagos FC on Facebook, @sportinglagosfc on Instagram. WhatsApp fan community — accessible via the club's official digital channels. SONA AI assistant — available on the website and WhatsApp for instant answers. For ticketing enquiries, visit the stadium on matchday or follow official announcements on social media."
   }
 ]

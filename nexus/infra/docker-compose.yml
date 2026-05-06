@@ -4,8 +4,7 @@
 # Firecrawl uses the cloud API (api.firecrawl.dev) — no local service needed.
 #
 # Services:
-#   api    → FastAPI backend  (http://localhost:8000)
-#   redis  → Celery job queue (localhost:6379)
+#   api → FastAPI backend (http://localhost:8000)
 
 services:
 
@@ -18,15 +17,6 @@ services:
       - "8000:8000"
     env_file:
       - ../backend/.env
-    depends_on:
-      - redis
-    restart: on-failure
-
-  # ── Redis (Celery job queue) ───────────────────────────────────────────────
-  redis:
-    image: redis:7-alpine
-    ports:
-      - "6379:6379"
     restart: on-failure
 
 networks:

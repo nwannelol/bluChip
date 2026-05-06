@@ -51,3 +51,36 @@ async def search(
         scrape_options=V1ScrapeOptions(formats=["markdown"]),
     )
     return result.data or []
+
+
+async def crawl(
+    start_url: str,
+    settings: Settings,
+    limit: int = 10,
+) -> list[dict[str, Any]]:
+    """Crawl a site starting from start_url, following internal links.
+
+    Returns up to `limit` pages as dicts with keys: url, markdown.
+    Polls until the crawl job completes (handled by the SDK).
+    """
+    v1 = _get_client(settings)._v1_client
+
+    result = await asyncio.to_thread(
+        v1.crawl_url,
+        start_url,
+        limit=limit,
+        scrape_options=V1ScrapeOptions(formats=["markdown"]),
+    )
+
+    pages = getattr(result, "data", None) or []
+
+    out = []
+    for page in pages:
+        if isinstance(page, dict):
+            out.append(page)
+        else:
+            out.append({
+                "url": getattr(page, "url", ""),
+                "markdown": getattr(page, "markdown", "") or "",
+            })
+    return out

@@ -41,6 +41,7 @@ class Settings(BaseSettings):
     # --- App ---
     app_env: str = "development"
     app_secret_key: str = ""
+    admin_api_key: str = ""
     cors_origins: str = "http://localhost:3000"
     log_level: str = "INFO"
 

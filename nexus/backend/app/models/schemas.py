@@ -1,7 +1,7 @@
 """Pydantic request / response schemas for NEXUS API endpoints."""
 
 import uuid
-from typing import Literal
+from typing import Any, Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -24,3 +24,30 @@ class ChatResponse(BaseModel):
     response: str
     sources: list[Source] = []
     is_stub: bool = False
+
+
+# ── Admin schemas ─────────────────────────────────────────────────────────────
+
+class AgentInfo(BaseModel):
+    name: str
+    display_name: str
+    description: str
+    status: Literal["active", "stub"]
+    is_stub: bool
+
+
+class AgentLogEntry(BaseModel):
+    id: str
+    agent_name: str
+    session_id: str
+    action: str
+    input: dict[str, Any] = Field(default_factory=dict)
+    output: dict[str, Any] = Field(default_factory=dict)
+    duration_ms: Optional[int] = None
+    error: Optional[str] = None
+    created_at: str
+
+
+class KnowledgeRefreshResponse(BaseModel):
+    status: str
+    message: str
