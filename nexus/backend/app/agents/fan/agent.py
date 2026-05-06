@@ -53,7 +53,7 @@ class FanAgent(BaseAgent):
 
         Returns (messages, sources, raw_docs).
         """
-        docs = await retrieve(message, self.settings, match_threshold=0.4, match_count=5)
+        docs = await retrieve(message, self.settings, match_threshold=0.4, match_count=8)
         context_text = _format_context(docs)
         sources = [
             {"content": d["content"][:120], "metadata": d.get("metadata", {})}
